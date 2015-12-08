@@ -8,12 +8,12 @@ TODO
 
 ### 9 December 2015
 
-| №   | Topic                               | Duration | Time  | Trainer |
-| --- | ----------------------------------- | -------- | ----- | ------- |
-| 00  | Course Introduction                 | 0.5h     | 10:00 | Doncho  |
-| 01  | Windows-based Applications          | 1h       | 10:30 | Niki    |
-| 02  | Universal Windows Platform (UWP)    | 1h       | 11:30 | Niki    |
-| 03  | Universal Windows Platform Controls | 2h       | 14:00 | Niki    |
+| №   | Topic                                     | Duration | Time  | Trainer |
+| --- | ----------------------------------------- | -------- | ----- | ------- |
+| 00  | Course Introduction                       | 0.5h     | 10:00 | Doncho  |
+| 01  | Windows-based Applications                | 1h       | 10:30 | Niki    |
+| 02  | Windows 10 and Universal Windows Platform | 2h       | 11:30 | Niki    |
+| 03  | Universal Windows Platform Controls       | 2h       | 14:00 | Niki    |
 
 ### 10 December 2015
 
