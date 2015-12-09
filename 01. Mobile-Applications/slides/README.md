@@ -10,7 +10,6 @@
 
 <!-- section start -->
 
-<!-- attr: { showInPresentation:true } -->
 # Table of Contents
 - Mobile applications overview
   - Devices and platforms
@@ -24,14 +23,12 @@
 # Mobile Applications
 ##  What is a mobile application?
 
-<!-- attr: { showInPresentation:true } -->
 # Mobile Applications
-- Mobile applications are software applications running on mobile devices
-  - i.e. tablets, smartphones and other mobile devices
+- Mobile applications are **software applications running on mobile devices**
+  - i.e. **tablets**, **smartphones** and other **mobile devices**
 - Mobile applications are often available through app distribution platforms (stores)
   - Apple App Store, Google Play, Windows Phone Store, BlackBerry App World, etc…
 
-<!-- attr: { showInPresentation:true } -->
 # Mobile Platforms and Devices
 - The most prominent platforms are as follows:
   - Apple iOS
@@ -44,11 +41,17 @@
   - Samsung Bada (stopped from development)
   - Tizen by Intel and Samsung
 
-<!-- attr: { showInPresentation:true } -->
-# Platforms Market Share 2013
-- As for Q2 2013 (August 2013) the market share of mobile platforms is as follows:
-- Gartner numbers: http://www.gartner.com/newsroom/id/2573415
-- IDC numbers: http://www.idc.com/getdoc.jsp?containerId=prUS24257413
+<!-- attr: {style: 'font-size: 0.9em'} -->
+# Platforms Market Share 2015
+- Mobile OS Market share for **Q3 2015** (August 2015) by [Gartner numbers](http://www.gartner.com/newsroom/id/3115517) and [IDC numbers](http://www.idc.com/prodserv/smartphone-os-market-share.jsp)
+
+| Operating System | Share by Gartner | Share by IDC |
+| ---------------- | ---------------- | ------------ |
+| Android          | 82.2%            | 82.8%        |
+| iOS              | 14.6%            | 13.9%        |
+| Windows          | 2.5%             | 2.6%         |
+| BlackBerry       | 0.3%             | 0.3%         |
+| Others           | 0.4%             | 0.4%         |
 
 <!-- section start -->
 
@@ -56,24 +59,28 @@
 # Mobile Applications Development
 ##  Platforms and Tools
 
-<!-- attr: { showInPresentation:true } -->
 # Mobile Applications Development
-- Each platform has its own development platform and tools
-  - Windows – Visual Studio
-    - Skills: C#, VB.NET, C++, JavaScript
-  - Android – Eclipse and Android Dev tools
+- Platform, Tools and languages
+  - **Windows**:
+    - Tools: Visual Studio, Windows Phone SDK
+    - Skills: C#, JavaScript, VB.NET, C++
+  - **Android**:
+    - Tools: Eclipse/Android Studio, Android Dev tools
     - Skills: Java and/or C++
-  - iOS and iOS mobile – xCode
-    - Skills: Objective-C
+  - **iOS**:
+    - Tools: xCode, AppCode
+    - Skills: Objective-C, Swift, C, C++
 
-<!-- attr: { showInPresentation:true } -->
-# Mobile Applications Development (2)
-- Each platform has its own development platform and tools
-  - Firefox OS – Any text editor
+# Mobile Applications Development
+- Platform, Tools and languages
+  - **Firefox OS**:
+    – Any text editor: ViM, Sublime Text, Atom.io
     - Skills: Web, HTML and JavaScript
-  - BlackBerry OS – QNX Momentics IDE
+  - **BlackBerry OS**:
+    - Tools: QNX Momentics IDE
     - Java and/or C++
-  - Symbian OS – Carbide.c++ or Eclipse Pulsar
+  - **Symbian OS**:
+    - Tools: Carbide.c++ or Eclipse
     - Skills: C++ or Java
 
 <!-- section start -->
@@ -82,131 +89,136 @@
 # Types of Mobile Applications
 ##  Web, Hybrid and Native
 
-<!-- attr: { showInPresentation:true } -->
 # Types of Mobile Apps
 - As the technology evolves, so does the power of Mobile apps
   - More and more companies introduce their own mobile apps
 - Three common types of applications
-  - Web mobile applications
-  - Native mobile applications
-  - Hybrid mobile applications
+  - **Web** mobile applications
+  - **Native** mobile applications
+  - **Hybrid** mobile applications
 
 <!-- section start -->
 
 <!-- attr: { class:'slide-section'} -->
 # Web Mobile Applications
 
-<!-- attr: { showInPresentation:true } -->
 # Web Mobile Applications
 - Web mobile apps are not real applications
-  - They are web sites that has the look and feel of a mobile app
-  - Developed in any Web technology
+  - They are **web sites** that has the **look and feel** of a mobile app
+  - Developed in а web technology
     - ASP.NET, Node.js, Java SpringMVC, Django, etc...
-- Web mobile apps run in the browser
+- Web mobile apps run **in the browser**
   - Installed from an URL
   - They are actually a web site/application, working in chromeless browser
 
 # Web Mobile Applications
-- For security reasons web mobile apps cannot use the full power of the OS
+- For security reasons **web mobile apps cannot use the full power** of the OS
   - APIs like Geolocation, File System and Camera are inaccessible
-    - The users must explicitly confirm the access for some of the APIs, every time s/he opens the app
+    - The users must **explicitly confirm the access** for some of the APIs, every time s/he opens the app
 - Web mobile application are most suitable for informational applications and apps not using mobile functionality
   - Like a RSS application, news app
 
 <!-- section start -->
+
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 # Native Mobile Applications
+##  Using the default technology
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { showInPresentation:true } -->
 # Native Applications
 - Native applications are applications developed for running on a specific OS
   - They run only on its operating system
-- Native apps must be installed either using an Application Store (Google Play, App Store) or through an external app installer
+- Native apps must be installed either using an **Application Store** (Google Play, App Store) or through an **external app installer**
 
-<!-- attr: { showInPresentation:true } -->
-# Native Applications (2)
-- Native apps have full access to resources of OS
+# Native Applications
+- Native apps have **full access to resources** of OS
   - Geolocation, File System, Accelerometer, etc.
-  - The user must confirm the access to device APIs
+  - The user still needs to confirm the access to device APIs
     - Yet, only once, at the installation of the app
 - Native apps are developed on the platform and are hard to be ported to other platforms
-  - iPhone apps with Objective-C
+  - iPhone apps with Objective-C/Swift
   - Android apps with Java
-  - Windows Phone apps with C#
+  - Windows Phone apps with C#, JavaScript, C++
 
-<!-- attr: { showInPresentation:true } -->
-# Native Applications (3)
+# Native Applications
 - Native apps are suitable when developing:
-  - Games
+  - **Games**
     - The developer can use the device’s GPU
-  - Apps with complex processing
+  - Apps with **complex processing**
     - The app must do a work of processing
-  - Apps where 10 milliseconds slowdown is crucial
+  - Apps where **10 milliseconds slowdown is crucial**
 
 <!-- section start -->
+
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 # Hybrid Mobile Applications
 ##  Learning all Objective-C, Java and C# is not good enough?
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { showInPresentation:true } -->
 # Hybrid Applications
+
 - Hybrid apps are part native, part web apps
   - Yet they are neither
   - Also called cross-platform
-- Hybrid apps are like native apps
-  - They can be published to an application store
-  - They can be installed on the device
-  - They can use the power of the device
-- Hybrid apps are like web apps
-  - Coded in web technologies like HTML and JS
+- Hybrid apps are **like native apps**
+  - They can be **published to an application store**
+  - They can be **installed on the device**
+  - They can use the **full power of the device**
+- Hybrid apps are like **web apps**
+  - Coded in web technologies like **HTML and JS**
 
-<!-- attr: { showInPresentation:true } -->
-# Hybrid Applications (2)
-- Hybrid applications leverage the engine of the default browsers for the platform
+# Hybrid Applications
+
+- Hybrid applications **leverage the engine** of the **default browsers** for the platform
   - Safari mobile for iOS
   - Android browser for Android
-  - IE9 mobile for Windows Phone 7
-  - IE10 mobile for Windows Phone 8
-- The browser engine renders the HTML and process the JavaScript locally to the device
+  - IE10/IE11 mobile for Windows Phone 7 and Windows Phone 8
+  - Edge for Windows 10
+- The browser **engine renders the HTML** and **process the JavaScript locally** to the device
   - There is an abstraction layer, enabling the app to access device capabilities
 
-<!-- attr: { showInPresentation:true } -->
-- Hybrid applications run in a native container on a mobile device
+<!-- attr: {style: 'font-size: 0.9em'} -->
+# Hybrid Applications
+
+- Hybrid applications run in a **native container** on a mobile device
   - The native container uses the browser engine to run the app
     - `UIWebView` for iOS
     - `WebView` for Android
     - `WebBrowser` in Windows Phone 8
   - This enables the app to use the device capabilities
+- Hybrid application are a good choice when developing a Line-of-business application
+  - Apps showing data
+  - Games that do not have complex graphics and dynamics
+
 # Hybrid Applications Structure
 
-<!-- attr: { showInPresentation:true } -->
-# Hybrid Applications Structure (2)
-- Most of the default mobile browsers use WebKit rendering engine
+- Most of the default mobile browsers use WebKit-like rendering engine
   - That means iOS, Android, Blackberry, etc.
   - Windows Phone’s IE uses Trident engine
+  - Windows Edge uses EdgeHTML engine
 - That is why most hybrid applications can be tested on simulators, not only on emulators
+  - i.e. running in a browser that is resized to fixed resolution and screen size
 
 <!-- section start -->
+
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
 # Hybrid Apps Platforms
+##  Different ways of creating hybrid apps
 
-<img class="slide-image" src="imgs/pic.png" style="width:80%; top:10%; left:10%" />
-
-<!-- attr: { showInPresentation:true } -->
 # Hybrid Apps Platforms
 - Since the rise of HTML5 (2010) more and more hybrid application platforms surfaced
   - Apache Cordova (late PhoneGap)
   - Appcelerator Titanium
+  - NativeScript by Telerik
   - Xamarin
   - And more
 - Most hybrid app platforms targeted web developers with JavaScript skills
   - Since HTML is supported everywhere
 
-<!-- attr: { showInPresentation:true } -->
+# NativeScript by Telerik
+- NativeScript is a platform for creating cross-platform native applications with JavaScript
+  - Has its own JavaScript engine that interprets the JavaScript to native operations
+  - Has almost very small performance hit on the app
+  - The only drawback is bigger size of the application
+
 # Apache Cordova
 - Apache Cordova (late PhoneGap) is a platform for creating mobile applications using web technologies
   - The applications run on the most used platforms
@@ -214,7 +226,6 @@
   - Applications run in a web view
 - Apache Cordova was created by Nitobi Software, and was acquired by Adobe Systems in 2011
 
-<!-- attr: { showInPresentation:true } -->
 # Appcelerator Titanium
 - Appcelerator Titanium is a product of Appcelerator Inc.
   - Use web technologies (like HTML and JS) to build cross-platform (hybrid) applications
@@ -222,7 +233,6 @@
   - Applications run in a web view
 - Titanium has its own IDE, called Titatinum Studio and simulators
 
-<!-- attr: { showInPresentation:true } -->
 # Xamarin
 - Xamarin is a cross-mobile applications platform
   - Yet, it does not use web technologies
@@ -231,6 +241,8 @@
   - Applications are developed using C# and .NET like platform (Mono)
   - Apps run on iOS, Android and Windows Phone
 
-<!-- attr: { showInPresentation:true } -->
-# Mobile Applications
-- http://academy.telerik.com
+<!-- section start -->
+<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true, style:'font-size:1em' } -->
+<!-- # Mobile Applications
+## Questions -->
+[link to our Forum](http://telerikacademy.com/Forum/Category/9/mobile-development)
