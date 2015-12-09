@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Buttons.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Buttons"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <HyperlinkButton Content="Go to http://github.com/NikolayIT"
+                         NavigateUri="http://github.com/NikolayIT"
+                         VerticalAlignment="Top"
+                         HorizontalAlignment="Center" />
+
+            <StackPanel Name="CheckBoxContainer">
+                <TextBlock Text="Supported Devices" FontSize="15" Foreground="Red"/>
+                <CheckBox Content="Mobile"/>
+                <CheckBox Content="Web"/>
+                <CheckBox Content="Windows Desktop"/>
+            </StackPanel>
+
+            <Line Width="Auto" Height="15" Visibility="Visible"/>
+
+            <StackPanel Name="FuelsContainer">
+                <TextBlock Text="Fuels" FontSize="15" Foreground="Red"/>
+                <RadioButton GroupName="Fuel" Margin="3">Petrol</RadioButton>
+                <RadioButton GroupName="Fuel" Margin="3">Diesel</RadioButton>
+            </StackPanel>
+
+            <Line Width="Auto" Height="15" Visibility="Visible"/>
+
+            <StackPanel Name="InductionContainer">
+                <TextBlock Text="Induction" FontSize="15" Foreground="Red"/>
+                <RadioButton GroupName="Induction" Margin="3">Unforced</RadioButton>
+                <RadioButton GroupName="Induction" Margin="3">
+                    Mechanical supercharger
+                </RadioButton>
+                <RadioButton GroupName="Induction" Margin="3">Turbocharger</RadioButton>
+            </StackPanel>
+
+            <Button Click="OnGetDataClick"
+                    Content="Get Data" />
+            <TextBlock Name="TextBlockResult" />
+        </StackPanel>
+    </Grid>
+</Page>

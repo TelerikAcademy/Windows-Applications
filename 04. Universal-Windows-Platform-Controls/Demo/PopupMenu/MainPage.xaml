@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="PopupMenu.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PopupMenu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:PopupMenu.ViewModels"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <viewModels:PhonesViewModel />
+    </Page.DataContext>
+
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center">
+        <TextBlock Name="TextBoxResult" />
+        <ItemsControl ItemsSource="{Binding Phones}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Model}"
+                               FontSize="24"
+                               RightTapped="OnPhoneModelClicked"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
+</Page>
