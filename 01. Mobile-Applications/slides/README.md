@@ -104,7 +104,7 @@
 
 # Web Mobile Applications
 - Web mobile apps are not real applications
-  - They are **web sites** that has the **look and feel** of a mobile app
+  - They are **web sites** that have the **look and feel** of a mobile app
   - Developed in а web technology
     - ASP.NET, Node.js, Java SpringMVC, Django, etc...
 - Web mobile apps run **in the browser**
