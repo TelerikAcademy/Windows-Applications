@@ -20,7 +20,7 @@ TODO
 | Topic                             | Duration | Time  |
 | --------------------------------- | -------- | ----- |
 | Windows Universal Layout controls | 2h       | 10:00 | 
-| Data-bining                       | 2h       | 13:30 |
+| Data-binding                      | 2h       | 13:30 |
 | Data-binding list controls        | 2h       | 16:00 |
 
 ### 11 December 2015
@@ -78,4 +78,4 @@ TODO
 
 | Topic             | Duration | Time  |
 | ----------------- | -------- | ----- |
-| Projects defences | 8h       | 10:00 |
+| Project defenses  | 8h       | 10:00 |
