@@ -1,3 +1,5 @@
+[Video with the selection process](https://www.youtube.com/watch?v=fcTJ6GI6GTA)
+
 | Teams                  | Selections|
 | ---------------------- | --------- |
 | icehawk and            | 1 |
