@@ -1,6 +1,6 @@
 [Video with the selection process](https://www.youtube.com/watch?v=fcTJ6GI6GTA)
 
-| Teams                  | Selections|
+| Usernames              | Team #|
 | ---------------------- | --------- |
 | icehawk and            | 1 |
 | forcodesake            | 1 |
