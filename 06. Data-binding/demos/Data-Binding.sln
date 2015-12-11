@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDataBinding", "SimpleDataBinding\SimpleDataBinding.csproj", "{669D58D6-1A3C-48AC-B524-ED38E759EB77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToOtherControls", "BindingToOtherControls\BindingToOtherControls.csproj", "{62393FC5-599A-4240-8AA7-22049ED6E7A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,24 @@ Global
 		{669D58D6-1A3C-48AC-B524-ED38E759EB77}.Release|x86.ActiveCfg = Release|x86
 		{669D58D6-1A3C-48AC-B524-ED38E759EB77}.Release|x86.Build.0 = Release|x86
 		{669D58D6-1A3C-48AC-B524-ED38E759EB77}.Release|x86.Deploy.0 = Release|x86
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|ARM.ActiveCfg = Debug|ARM
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|ARM.Build.0 = Debug|ARM
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|ARM.Deploy.0 = Debug|ARM
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|x86.ActiveCfg = Debug|x86
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|x86.Build.0 = Debug|x86
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Debug|x86.Deploy.0 = Debug|x86
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|ARM.ActiveCfg = Release|ARM
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|ARM.Build.0 = Release|ARM
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|ARM.Deploy.0 = Release|ARM
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|x86.ActiveCfg = Release|x86
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|x86.Build.0 = Release|x86
+		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
