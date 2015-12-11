@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDataBinding", "Simple
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingToOtherControls", "BindingToOtherControls\BindingToOtherControls.csproj", "{62393FC5-599A-4240-8AA7-22049ED6E7A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConverters", "ValueConverters\ValueConverters.csproj", "{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,24 @@ Global
 		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|x86.ActiveCfg = Release|x86
 		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|x86.Build.0 = Release|x86
 		{62393FC5-599A-4240-8AA7-22049ED6E7A1}.Release|x86.Deploy.0 = Release|x86
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|ARM.Build.0 = Debug|ARM
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|ARM.Deploy.0 = Debug|ARM
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|x86.ActiveCfg = Debug|x86
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|x86.Build.0 = Debug|x86
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Debug|x86.Deploy.0 = Debug|x86
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|ARM.ActiveCfg = Release|ARM
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|ARM.Build.0 = Release|ARM
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|ARM.Deploy.0 = Release|ARM
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|x86.ActiveCfg = Release|x86
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|x86.Build.0 = Release|x86
+		{FF570776-8A4A-4C6F-A754-C4EC03D2AD02}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
