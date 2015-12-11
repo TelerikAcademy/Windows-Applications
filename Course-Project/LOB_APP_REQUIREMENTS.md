@@ -1,7 +1,5 @@
-## Not final
-
 # Mobile Applications for Windows
-##  Creating Line of Business Application
+##  Creating Line-of-business (LoB) Application
 
 Design and implement a native mobile application for **Windows 8.1** or **Windows 10**. The application should be **touch-friendly** and should provide **actual functionality** which users can take advantage of. That is, the application must be of value to the end user of a tablet or smartphone, enabling them to consume/produce real content. **DO NOT make an application for imaginary or unrealistic tasks**
 
@@ -31,7 +29,7 @@ Design and implement a native mobile application for **Windows 8.1** or **Window
 ### Device APIs
 
 - Use four of the following device APIs:
-  - Accelerometer 
+  - Accelerometer
   - Camera
   - Compass
   - Geolocation
@@ -96,18 +94,21 @@ Design and implement a native mobile application for **Windows 8.1** or **Window
 - Validation of user input
 - Handling access denials, network issues, etc. and keeping app alive
 - **Up to 4 points**
- 
-**The maximum score for the teamwork assignment is 100 points**
 
+**The maximum score for the teamwork assignment is 100 points**
 
 ##  Additional Requirements
 - You are allowed to use any external libraries if you wish.
 - Use http://github.com as source control for the application
 
 ##  Deliverables
+- Upload a brief video(2-3 mins) of your application and upload it in YouTube
+- Upload your project in http://best.telerikacademy.com
 - Put the following in a ZIP archive and submit it:
   - A link to a GitHub repository, holding your application
-  - A brief description of your application 
+  - A brief description of your application
+  - A link to the video, uploaded in YouTube
 
 ##  Project Evaluation
 Each submitted project will be evaluated by the trainers. Evaluation will strictly follow the above requirements.
+**Each project without an uploaded video in YouTube will be considered not done**

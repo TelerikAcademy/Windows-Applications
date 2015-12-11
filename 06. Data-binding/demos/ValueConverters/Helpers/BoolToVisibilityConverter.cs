@@ -5,7 +5,7 @@
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Data;
 
-    public class BoolToVisibilityConverter:IValueConverter
+    public class BoolToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
@@ -18,6 +18,7 @@
             {
                 return null;
             }
+
             return boolVal ? Visibility.Visible : Visibility.Collapsed;
         }
 

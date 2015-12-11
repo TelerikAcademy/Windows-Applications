@@ -21,7 +21,8 @@
                 HorizontalAlignment="Stretch"
                 Content="Hide" 
                 Click="OnShowHideButtonClick"/>
-        <Image Visibility="{Binding IsImageVisible, Converter={StaticResource boolToVisibilityConverter}}"
+        <Image Visibility="{Binding IsImageVisible,
+                                    Converter={StaticResource boolToVisibilityConverter}}"
                 Source="{Binding ImgSrc}" 
                Margin="15"
                HorizontalAlignment="Center"/>
