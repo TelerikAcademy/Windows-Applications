@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="SimpleDataBindingLists.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleDataBindingLists"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Name: "
+                       Grid.Column="0"
+                       VerticalAlignment="Center"/>
+            <TextBox Name="tbName"
+                     Grid.Column="1"
+                     HorizontalAlignment="Stretch" />
+        </Grid>
+        <Button Content="Add"
+                Grid.Row="1"
+                HorizontalAlignment="Stretch"
+                Click="OnAddButtonClick" />
+        <ListBox ItemsSource="{Binding Names}"
+                 Grid.Row="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding}" />
+                        <Button Content="X" Click="OnDeleteItemButtonClick"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>
