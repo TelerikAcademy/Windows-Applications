@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="SimpleDataBinding.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleDataBinding"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:SimpleDataBinding.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <viewModels:CatViewModel x:Key="theViewModel" Name="Stamo" Age="0.5" ImgUrl="http://www.kimballstock.com/pix/CAT/02/CAT-02-JE0307-01P.JPG" />
+    </Page.Resources>
+    <StackPanel DataContext="{StaticResource theViewModel}">
+        <TextBlock Text="{Binding Name}" 
+                   FontSize="26" HorizontalAlignment="Center"/>
+        <Image Source="{Binding ImgUrl}" HorizontalAlignment="Stretch"/>
+    </StackPanel>
+</Page>
