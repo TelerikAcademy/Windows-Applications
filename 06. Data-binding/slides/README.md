@@ -2,7 +2,7 @@
 <!-- attr: { class:'slide-title', showInPresentation:true, hasScriptWrapper:true } -->
 
 # Data-binding
-##  In UWP Applications
+##  In Universal Windows Applications
 
 <!-- attr: {showInPresentation: true} -->
 # Table of Contents
@@ -18,12 +18,13 @@
 - Using Update Source Triggers
 
 <!-- section start -->
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# What is Data-binding?
-##  And why we need it?
+<!-- attr: { class:'slide-section', showInPresentation:true } -->
+<!-- # What is Data-binding?
+##  And why we need it? -->
 
 <!-- attr: {showInPresentation: true} -->
 # What is Data-binding?
+
 - The purpose of most applications is to:
   - **Display data** to users
   - Let them **edit that data**
@@ -32,8 +33,8 @@
   - **Expose the data** in object, hierarchical, or relational format
 - With the XAML Data-binding engine, you get **more features** with **less code**
 
-<!-- attr: {showInPresentation: true} -->
-# What is Data-binding?
+<!-- attr: {showInPresentation: true, style: 'font-size: 0.95em' } -->
+<!-- # What is Data-binding? -->
 
 - Data-binding is pulling information out of an object into another object or property
   - Data-binding means **automatically change** the value of a property when the value of **another property is changed**
@@ -54,7 +55,7 @@
   - Letting the engine keep them **synchronized**
 - The synchronization and conversion are duties of the Data-binding engine
 
-<!-- attr: {showInPresentation: true} -->
+<!-- attr: {showInPresentation: true, hasScriptWrapper: true, style: 'font-size:0.9em'} -->
 # Simple Binding
 - Binding a property to a data source property:
 - The **shorthand** binding syntax:
@@ -74,7 +75,6 @@
 </TextBox>
 ```
 
-
 <!-- section start -->
 
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
@@ -89,8 +89,8 @@
 - If you don’t specify a `Source` property
   - The XAML binding engine goes up the element tree in searching of a `DataContext`
 
-<!-- attr: {showInPresentation: true} -->
-# Data Contexts
+<!-- attr: {showInPresentation: true, hasScriptWrapper: true} -->
+<!-- # Data Contexts -->
 - Two controls with the same logical parent can bind to the same data source
 - Providing a `DataContext` value for both of the text box controls
 
@@ -120,17 +120,17 @@ public partial class MainPage : Page
 }
 ```
 
-<!-- attr: { class:'slide-section demo', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- attr: { class:'slide-section demo', showInPresentation:true} -->
 <!-- # Data Contexts -->
 ##  [Demo]()
 
 
 <!-- section start -->
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Binding to UI Components Together
-##  Binding a property of a property of a component to other component
+<!-- attr: { class:'slide-section', showInPresentation:true } -->
+<!-- # Binding to UI Components Together
+##  Binding a property of a property of a component to other component -->
 
-<!-- attr: {showInPresentation: true} -->
+<!-- attr: {hasScriptWrapper: true} -->
 # Binding to Other Controls
 
 - XAML provides binding of one element’s property to another element’s property
@@ -138,7 +138,8 @@ public partial class MainPage : Page
 
 ```xml
 <TextBox Name="ageTextBox" Foreground="Red"/>
-<Button Foreground="{Binding ForeGround, ElementName= ageTextBox}"
+<Button Foreground="{Binding ForeGround,
+                             ElementName= ageTextBox}"
         Content="Birthday" />
 ```
 
@@ -149,11 +150,11 @@ public partial class MainPage : Page
 
 <!-- section start -->
 
-<!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# The Binding Class
-##  And its properties
+<!-- attr: { class:'slide-section', showInPresentation:true } -->
+<!-- # The Binding Class
+##  And its properties -->
 
-<!-- attr: {showInPresentation: true} -->
+<!-- attr: {hasScriptWrapper: true} -->
 # The Binding Class
 
 - A more full-featured binding example
@@ -162,10 +163,9 @@ public partial class MainPage : Page
   - `ConverterParameter` - parameter passed to the `IValueConverter` methods during the conversion
 
 ```xml
-<TextBox x:Name="TextBoxPerson"
-    Foreground="{Binding Path=Age, Mode=OneWay,
-    Source={StaticResource Tom},
-    Converter={StaticResource ageConverter}}" />
+<TextBox Foreground="{Binding Path=Age, Mode=OneWay,
+                     Source={StaticResource Tom},
+                     Converter={StaticResource ageConverter}}" />
 ```
 
 <!-- attr: {showInPresentation: true} -->
@@ -189,7 +189,7 @@ public partial class MainPage : Page
 <!-- # Value Conversion
 ##  How to bind `Foreground` to an integer? -->
 
-<!-- attr: {showInPresentation: true} -->
+<!-- attr: {hasScriptWrapper: true} -->
 # Value Conversion
 
 - In the previous example we might decide that anyone **over age 25 is hot**
@@ -216,7 +216,7 @@ public partial class MainPage : Page
   - `ConvertBack()` - convert back from the UI data to the source data
 
 <!-- attr: {showInPresentation: true} -->
-# Value Conversion
+<!-- # Value Conversion -->
 - Converter `Int32` -> `Brush`
 
 ```cs
@@ -238,9 +238,9 @@ public class AgeToForegroundConverter : IValueConverter
 }
 ```
 
-<!-- attr: {showInPresentation: true} -->
-# Value Conversion
-- Creating an instance of the converter class in the XAML:
+<!-- attr: {showInPresentation: true, hasScriptWrapper: true} -->
+<!-- # Value Conversion -->
+- Creating an instance of the converter class in the XAML and using it:
 
 ```xml
 <Page …
@@ -266,71 +266,49 @@ public class AgeToForegroundConverter : IValueConverter
 
 <!-- section start -->
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
-# Binding Path Syntax
-##  What else can we do with data-binding?
+<!-- # Binding Path Syntax
+##  What else can we do with data-binding? -->
 
-<!-- attr: {showInPresentation: true} -->
 # Binding Path Syntax
-- When you use `Path=Something` in a `Binding` statement, the `Something` can be in a number of formats
+
+- When you use `Path= Something` in a `Binding` statement, the `Something` can be in a number of formats
   - `Path=Property` - bind to the property of the current object (`Path=Age`)
   - `Path=(OwnerType.AttachedProperty)` - bind to an attached dependency property (`Path=(Validation.HasError)`)
   - `Path=Property.SubProperty` - bind to a subproperty (`Path=Name.Length`)
 
 <!-- attr: {showInPresentation: true} -->
-# Binding Path Syntax (2)
-- Other formats
+<!-- # Binding Path Syntax
+- Other formats -->
   - `Path=Property[n]` - bind to an indexer (`Path=Names[0]`)
   - Path=Property/Property - master-detail binding (`Path=Customers/Orders`)
   - `Path=(OwnerType.AttachedProperty)[n].SubProperty` - bind to a mixture of properties, subproperties, and indexers
     - `Path=(Validation.Errors)[0].ErrorContent)`
 
 <!-- section start -->
+
 <!-- attr: { class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+<!-- # Update Source Triggers
+##  When to update the binding? -->
+
+<!-- attr: {hasScriptWrapper: true} -->
 # Update Source Triggers
 
+- Binding can happen immediately when the control state changes
+- Using the `UpdateSourceTrigger` property on the `Binding` object
 
-<!-- attr: {showInPresentation: true} -->
-# Update Source Triggers
-  - Binding can happen immediately when the control state changes
-  - Using the `UpdateSourceTrigger` property on the `Binding` object
-
-```cs
-<TextBox …>
-  <TextBox.Text>
-    <Binding Path="Age"
-      UpdateSourceTrigger="PropertyChanged"> …
-    </Binding>
-  </TextBox.Text>
-</TextBox>
+```xml
+<TextBox Text="{Binding Age,
+                UpdateSourceTrigger= PropertyChanged}" />
 ```
 
 <!-- attr: {showInPresentation: true} -->
-# Update Source Triggers
+<!-- # Update Source Triggers -->
 - `UpdateSourceTrigger` values
   - `Default` - updates "naturally" based on the target control
   - `PropertyChanged` - updates the source immediately
   - `Explicit` - when `BindingExpression. UpdateSource()` is explicitly called
 
-<!-- attr: {showInPresentation: true} -->
+<!-- attr: {class: 'slide-section', showInPresentation: true} -->
 # Data-binding
-- Questions?
-- ?
-- ?
-- `?`
-- ?
-- ?
-- ?
-- ?
-- ?
-- ?
-- ?
-- http://academy.telerik.com
-
-<!-- attr: {showInPresentation: true} -->
-# Exercises
-- Write a program that show a simple window, it contains two controls a `Slider` and a `TextBlock` with a single line of text. If you pull the thumb in the slider to the right, the font size of the text is increased immediately. Add a label that shows the current font size. Use Data-binding.
-- Add to the previous exercise few buttons each of which applies a preset value to the slider. When you click the "Set to Large" button the  code in `Click` event sets the value of the slider, which in turn forces a change to the font size of the text through Data-binding.
-
-<!-- attr: {showInPresentation: true} -->
-# Exercises (2)
-- Write a program that shows a simple window, which contains a `TextBlock` and setup the `TextBlock` to draw its text from a `TextBox` and its current foreground and background colors  from separate lists of colors.
+## Questions?
+http://academy.telerik.com
