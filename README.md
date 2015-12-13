@@ -8,28 +8,29 @@ TODO
 
 ### 9 December 2015
 
-| №   | Topic                                     | Duration | Time  | Trainer |
-| --- | ----------------------------------------- | -------- | ----- | ------- |
-| 00  | Course Introduction                       | 0.5h     | 10:00 | Doncho  |
-| 01  | Windows-based Applications History        | 1h       | 10:30 | Niki    |
-| 02  | Windows 10 and Universal Windows Platform | 2h       | 11:30 | Niki    |
-| 03  | Universal Windows Platform Controls       | 2h       | 14:00 | Niki    |
+| №   | Topic                                     | Duration | Trainer |
+| --- | ----------------------------------------- | -------- | ------- |
+| 00  | Course Introduction                       | 0.5h     | Doncho  |
+| 01  | Mobile Applications                       | 1h       | Doncho  |
+| 02  | Windows-based Applications History        | 1h       | Niki    |
+| 03  | Windows 10 and Universal Windows Platform | 2h       | Niki    |
 
 ### 10 December 2015
 
-| Topic                             | Duration | Time  |
-| --------------------------------- | -------- | ----- |
-| Windows Universal Layout controls | 2h       | 10:00 | 
-| Data-binding                      | 2h       | 13:30 |
-| Data-binding list controls        | 2h       | 16:00 |
+| №   | Topic                                     | Duration | Trainer |
+| --- | ----------------------------------------- | -------- | ------- |
+| 03  | Universal Windows Platform Controls       | 2h       | Niki    |
+| 03  | Windows Universal Layout controls         | 2h       | Doncho  |
+| 03  | Data-binding                              | 2h       | Doncho  |
+| 03  | Data-binding list controls                | 2h       | Doncho  |
 
 ### 11 December 2015
 
-| Topic                     | Duration | Time  |
-| --------------------------| -------- | ----- |
-| **Workshop**: Creating UI | 4h       | 10:00 |
-| Styles and Templates      | 1h       | 15:00 |
-| Resources                 | 0.5h     | 16:30 | 
+| Topic                     | Duration | Trainer |
+| --------------------------| -------- | ------- |
+| **Workshop**: Creating UI | 4h       | Doncho  |
+| Styles and Templates      | 1h       | Doncho  |
+| Resources                 | 0.5h     | Doncho  |
 
 ### 14 December 2015
 
@@ -49,12 +50,12 @@ TODO
 
 ### 16 December 2015
 
-| Topic                           | Duration | Time  |
-| --------------------------------| -------- | ----- |
-| Application Storages            | 1h       | 10:00 |
-| Async programming with C#       | 1h       | 11:30 |
-| Working with remote Data        | 1h       | 13:30 |
-| **Workshop**: Working with data | 3h       | 16:00 |
+| Topic                           | Duration | Time  | Trainer |
+| --------------------------------| -------- | ----- | ------- |
+| Application Storages            | 1h       | 10:00 | Niki    |
+| Async programming with C#       | 1h       | 11:30 | Niki    |
+| Working with remote Data        | 1h       | 13:30 | Niki    |
+| **Workshop**: Working with data | 3h       | 16:00 | Niki    |
 
 ### 17 December 2015
 
