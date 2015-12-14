@@ -1,45 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SyncResourceAccessProblems
+﻿namespace SyncResourceAccessProblems
 {
-    class SyncResourceAccessProblems
+    using System;
+    using System.Net;
+
+    public static class SyncResourceAccessProblems
     {
-        static string websiteHtml = "";
-
-        static void GetWebsiteHtml(string websiteUrl)
-        {
-            WebClient client = new WebClient();
-
-            websiteHtml = client.DownloadString(websiteUrl);
-        }
-
-        static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Enter URL of website for which to print HTML:");
-            string url = Console.ReadLine();
+            var url = Console.ReadLine();
 
-            GetWebsiteHtml(url);
+            var webContentAsString = GetWebsiteHtml(url);
 
-            while(true)
+            while (true)
             {
                 Console.WriteLine("What should I do?");
-                string userInput = Console.ReadLine();
+                var userInput = Console.ReadLine();
 
                 if (userInput == "Print")
                 {
-                    Console.WriteLine(websiteHtml);
+                    Console.WriteLine(webContentAsString);
                 }
-
                 else
                 {
                     Console.WriteLine("I don't know that command. Try again...");
                 }
             }
+        }
+
+        private static string GetWebsiteHtml(string websiteUrl)
+        {
+            var client = new WebClient();
+            var webContentAsString = client.DownloadString(websiteUrl);
+            return webContentAsString;
         }
     }
 }
