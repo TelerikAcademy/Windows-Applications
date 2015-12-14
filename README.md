@@ -52,10 +52,9 @@ TODO
 
 | Topic                           | Duration | Time  | Trainer |
 | --------------------------------| -------- | ----- | ------- |
-| Application Storages            | 1h       | 10:00 | Niki    |
-| Async programming with C#       | 1h       | 11:30 | Niki    |
-| Working with remote Data        | 1h       | 13:30 | Niki    |
-| **Workshop**: Working with data | 3h       | 16:00 | Niki    |
+| Asynchronous Programming in C#  | 2h       | 10:00 | Niki    |
+| Application Storages            | 1h       | 13:00 | Niki    |
+| Working with remote Data        | 1h       | 14:00 | Niki    |
 
 ### 17 December 2015
 
