@@ -1,4 +1,4 @@
-﻿namespace CreatingAndContinuingTasks
+﻿namespace TasksWithExceptionHandling
 {
     using System;
     using System.Collections.Concurrent;
@@ -7,7 +7,7 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    public static class CreatingAndContinuingTasks
+    public static class TasksWithExceptionHandling
     {
         public static void Main()
         {
@@ -35,6 +35,11 @@
             RunReadSquareRootsLookupTableAsync(numbersCount).ContinueWith(
                 loadTask =>
                 {
+                    if (loadTask.IsFaulted)
+                    {
+                        Console.WriteLine("Loading failed with: " + loadTask.Exception?.Message);
+                    }
+
                     foreach (var entry in loadTask.Result)
                     {
                         destinationTable[entry.Key] = entry.Value;
@@ -44,7 +49,7 @@
 
         private static Task<IDictionary<int, double>> RunReadSquareRootsLookupTableAsync(int n)
         {
-            return Task.Run(() => ReadSquareRootsLookupTable(Enumerable.Range(0, n)));
+            return Task.Run(() => ReadSquareRootsLookupTable(Enumerable.Range(-1, n)));
         }
 
         private static IDictionary<int, double> ReadSquareRootsLookupTable(IEnumerable<int> numbers)
@@ -54,6 +59,11 @@
             {
                 Thread.Sleep(10);
                 numberSquareRoots[number] = Math.Sqrt(number);
+
+                if (number < 0)
+                {
+                    throw new Exception($"Trying to get srqt({number})!");
+                }
             }
 
             return numberSquareRoots;

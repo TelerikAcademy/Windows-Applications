@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DaySales.cs" />
     <Compile Include="RaceConditionSalesSumWithLocking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoldItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

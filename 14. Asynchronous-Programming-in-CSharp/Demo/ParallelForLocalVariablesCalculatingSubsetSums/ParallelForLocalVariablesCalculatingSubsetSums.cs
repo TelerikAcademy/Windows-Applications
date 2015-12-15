@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace ParallelForLocalVariablesCalculatingSubsetSums
+﻿namespace ParallelForLocalVariablesCalculatingSubsetSums
 {
-    class ParallelForLocalVariablesCalculatingSubsetSums
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading;
+    using System.Threading.Tasks;
+
+    public static class ParallelForLocalVariablesCalculatingSubsetSums
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            //Note: This demo should be run in Release mode. In Debug the framework keeps debug information, which slows the parallel processing significantly
+            // Note: This demo should be run in Release mode. In Debug the framework keeps debug information, which slows the parallel processing significantly
 
             int[] nums = Enumerable.Range(0, 999999 * 100).ToArray();
             long total = 0;
@@ -20,7 +19,6 @@ namespace ParallelForLocalVariablesCalculatingSubsetSums
 
             double pieceSize = nums.Length / (double)Environment.ProcessorCount;
 
-            
             List<Tuple<int, int>> ranges = new List<Tuple<int, int>>();
             for (int i = 0; i < Environment.ProcessorCount; i++)
             {
@@ -55,6 +53,7 @@ namespace ParallelForLocalVariablesCalculatingSubsetSums
             {
                 total += nums[i];
             }
+
             end = DateTime.Now;
 
             Console.WriteLine("time (ms): " + (end - start).Milliseconds);

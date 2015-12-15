@@ -1,57 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RaceConditionsSalesSum
+﻿namespace RaceConditionsSalesSum
 {
-    struct SoldItem
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
+    public static class RaceConditionsSalesSum
     {
-        public int PriceCents { get; private set; }
-        public string Name { get; private set; }
-
-        public SoldItem(int priceCents, string name)
+        public static void Main()
         {
-            this.PriceCents = priceCents;
-            this.Name = name;
+            var soldItemsForADay = GenerateSoldItemsData();
+
+            Console.WriteLine();
+            Console.WriteLine("--DAY-SALES-SEQUENTIAL-----------------------------------");
+            Console.WriteLine();
+
+            var daySalesSequential = AggregateDaySales(soldItemsForADay);
+            Console.WriteLine(daySalesSequential);
+
+            Console.WriteLine();
+            Console.WriteLine("---DAY-SALES-PARALLEL------------------------------------");
+            Console.WriteLine();
+
+            var daySalesParallel = AggregateDaySalesParallel(soldItemsForADay);
+            Console.WriteLine(daySalesParallel);
+
+            Console.WriteLine();
+            Console.WriteLine("What about summing numbers from 1 to 100 with 2 parallel for loops?");
+            var x = 0;
+            Parallel.For(0, 100, i => Parallel.For(i + 1, 100, a => { x += 1; }));
+            Console.WriteLine($"Expected: 4950. Actual: {x}");
         }
-    }
 
-    struct DaySales
-    {
-        public int TotalCents { get; private set; }
-        public Dictionary<string, int> SoldItemCounts { get; private set; }
-
-        public DaySales(int totalCents, Dictionary<string, int> soldItemCounts)
+        private static DaySales AggregateDaySalesParallel(List<SoldItem> allSales)
         {
-            this.TotalCents = totalCents;
-            this.SoldItemCounts = soldItemCounts;
-        }
-
-        public override string ToString()
-        {
-            StringBuilder soldItemCountsBuilder = new StringBuilder();
-
-            foreach (var entry in this.SoldItemCounts)
-            {
-                soldItemCountsBuilder.Append(entry.Key + ": " + entry.Value + System.Environment.NewLine);
-            }
-
-            //Note: This should really be a formatted string
-            return "Total Sales Sum: " + (TotalCents / 100.0) + "$" + System.Environment.NewLine +
-                "Sales count by item:" + System.Environment.NewLine +
-                soldItemCountsBuilder.ToString();
-        }
-    }
-
-    class RaceConditionsSalesSum
-    {
-        static DaySales AggregateDaySalesParallel(List<SoldItem> allSales)
-        {
-            //Note: This code gives me race-condition nightmares. For real.
-            Dictionary<string, int> soldItemCounts = new Dictionary<string, int>();
-            int totalCents = 0;
+            // Note: This code gives me race-condition nightmares. For real.
+            var soldItemCounts = new Dictionary<string, int>();
+            var totalCents = 0;
 
             Parallel.ForEach(allSales, (soldItem) =>
             {
@@ -62,7 +46,7 @@ namespace RaceConditionsSalesSum
             return new DaySales(totalCents, soldItemCounts);
         }
 
-        static DaySales AggregateDaySales(List<SoldItem> allSales)
+        private static DaySales AggregateDaySales(List<SoldItem> allSales)
         {
             Dictionary<string, int> soldItemCounts = new Dictionary<string, int>();
             int totalCents = 0;
@@ -87,11 +71,11 @@ namespace RaceConditionsSalesSum
             }
         }
 
-        static List<SoldItem> GenerateSoldItemsData()
+        private static List<SoldItem> GenerateSoldItemsData()
         {
-            List<SoldItem> soldItems = new List<SoldItem>();
+            var soldItems = new List<SoldItem>();
 
-            //The more items we have, the more often race conditions will arise and the larger the error will be
+            // The more items we have, the more often race conditions will arise and the larger the error will be
             for (int i = 0; i < 100; i++)
             {
                 soldItems.Add(new SoldItem(100, "Coke"));
@@ -99,7 +83,6 @@ namespace RaceConditionsSalesSum
                 soldItems.Add(new SoldItem(300, "Beer Nuts"));
                 soldItems.Add(new SoldItem(400, "Deer Nuts"));
                 soldItems.Add(new SoldItem(500, "HealthyNot Chips"));
-
                 soldItems.Add(new SoldItem(600, "Aisis Pork"));
                 soldItems.Add(new SoldItem(700, "Pengiun Stake"));
                 soldItems.Add(new SoldItem(800, "Ustillfat Diet Coke"));
@@ -108,25 +91,6 @@ namespace RaceConditionsSalesSum
             }
 
             return soldItems;
-        }
-
-        static void Main(string[] args)
-        {
-            var soldItemsForADay = GenerateSoldItemsData();
-
-            Console.WriteLine();
-            Console.WriteLine("--DAY-SALES-SEQUENTIAL-----------------------------------");
-            Console.WriteLine();
-
-            var daySalesSequential = AggregateDaySales(soldItemsForADay);
-            Console.WriteLine(daySalesSequential);
-
-            Console.WriteLine();
-            Console.WriteLine("---DAY-SALES-PARALLEL------------------------------------");
-            Console.WriteLine();
-
-            var daySalesParallel = AggregateDaySalesParallel(soldItemsForADay);
-            Console.WriteLine(daySalesParallel);
         }
     }
 }

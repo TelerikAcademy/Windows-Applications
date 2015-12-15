@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DB825CA-E0C0-4D46-8E0C-E06AC33E67BB}</ProjectGuid>
+    <ProjectGuid>{E0A10966-082A-4E7E-A4B4-351CB0FE69BC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RaceConditionsSalesSum</RootNamespace>
-    <AssemblyName>RaceConditionsSalesSum</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>SquareRootDemoWithAsyncAndAwait</RootNamespace>
+    <AssemblyName>SquareRootDemoWithAsyncAndAwait</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -43,10 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DaySales.cs" />
-    <Compile Include="RaceConditionsSalesSum.cs" />
+    <Compile Include="SquareRootDemoWithAsyncAndAwait.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SoldItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,21 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ParallelForImageManipulation
+﻿namespace ParallelForImageManipulation
 {
-    class ParallelForImageManipulation
+    using System;
+    using System.Drawing;
+    using System.Threading.Tasks;
+
+    public static class ParallelForImageManipulation
     {
+        public static void Main()
+        {
+            ManipulateImages("sourceImages", "targetImages");
+        }
+
         public enum RadialEffectDirection
         {
             IncreaseTowardsCenter,
             IncreaseTowardsBorder
         }
 
-        public static Color Blend(Color target, Color modifier, double modifierWeight)
+        private static Color Blend(Color target, Color modifier, double modifierWeight)
         {
             return Color.FromArgb(
                 //Note: For a detailed explanation on the usage of sqrt and pow, see https://www.youtube.com/watch?v=LKnqECcg6Gw. 
@@ -31,7 +33,7 @@ namespace ParallelForImageManipulation
                 );
         }
 
-        public static Color GetRadiallyBlurred(int row, int col, Color sourceColor, 
+        private static Color GetRadiallyBlurred(int row, int col, Color sourceColor, 
             int centerRow, int centerCol, Color blurColor, 
             double maxRadius, RadialEffectDirection direction)
         {
@@ -51,7 +53,7 @@ namespace ParallelForImageManipulation
             return Blend(sourceColor, blurColor, effectWeight);
         }
 
-        public static Color[,] GetColorMap(Bitmap bitmap)
+        private static Color[,] GetColorMap(Bitmap bitmap)
         {
             Color[,] colorMap = new Color[bitmap.Height, bitmap.Width];
 
@@ -66,7 +68,7 @@ namespace ParallelForImageManipulation
             return colorMap;
         }
 
-        public static void UpdateBitmap(Bitmap targetBitmap, Color[,] colorMap)
+        private static void UpdateBitmap(Bitmap targetBitmap, Color[,] colorMap)
         {
             for (int row = 0; row < targetBitmap.Height; row++)
             {
@@ -77,7 +79,7 @@ namespace ParallelForImageManipulation
             }
         }
 
-        public static void ManipulateImages(string sourceDirectoryPath, string targetDirectoryPath)
+        private static void ManipulateImages(string sourceDirectoryPath, string targetDirectoryPath)
         {
             var filenamesInDirectory = System.IO.Directory.GetFiles(sourceDirectoryPath);
 
@@ -106,11 +108,6 @@ namespace ParallelForImageManipulation
                 UpdateBitmap(bitmap, colorMap);
                 bitmap.Save(filename.Replace(sourceDirectoryPath, targetDirectoryPath));
             }
-        }
-
-        static void Main(string[] args)
-        {
-            ManipulateImages("sourceImages", "targetImages");
         }
     }
 }

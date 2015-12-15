@@ -1,60 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UsingBuiltInAsyncMethods
+﻿namespace UsingBuiltInAsyncMethods
 {
-    class UsingBuiltInAsyncMethods
+    using System;
+    using System.Net.Http;
+    using System.Threading;
+
+    using AngleSharp.Parser.Html;
+
+    public static class UsingBuiltInAsyncMethods
     {
-        static string websiteHtml = null;
+        private static string websiteHtml;
 
-        static async void GetWebsiteHtmlAsync(string websiteUrl)
+        public static void Main()
         {
-            HttpClient client = new HttpClient();
-            
-            websiteHtml = await client.GetStringAsync(websiteUrl);
-            Console.WriteLine("Downloaded html");
-        }
-
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Enter URL of website for which to print HTML:");
-            string url = Console.ReadLine();
-
-            //HttpClient client = new HttpClient();
-
-            //Task<string> websiteHtmlTask = client.GetStringAsync(url);
-
+            Console.WriteLine("Enter URL of website for which to print HTML: ");
+            var url = Console.ReadLine();
 
             GetWebsiteHtmlAsync(url);
 
             while (true)
             {
-                Console.WriteLine("What should I do?");
-                string userInput = Console.ReadLine();
-
-                if (userInput == "Print")
+                if (websiteHtml == null)
                 {
-                    //Console.WriteLine(websiteHtmlTask.Result);
-                    if (websiteHtml != null)
-                    {
-                        Console.WriteLine(websiteHtml);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Loading...");
-                    }
+                    Console.WriteLine("Loading...");
+                    Thread.Sleep(100);
                 }
-
                 else
                 {
-                    Console.WriteLine("I don't know that command. Try again...");
+                    var parser = new HtmlParser();
+                    var document = parser.Parse(websiteHtml);
+                    var links = document.QuerySelector("a").ChildElementCount;
+                    Console.WriteLine($"Found: {links} links");
+
+                    Console.WriteLine("Enter URL of website for which to print HTML: ");
+                    url = Console.ReadLine();
+                    GetWebsiteHtmlAsync(url);
                 }
             }
+        }
+
+        private static async void GetWebsiteHtmlAsync(string websiteUrl)
+        {
+            var client = new HttpClient();
+            websiteHtml = await client.GetStringAsync(websiteUrl);
+            Console.WriteLine("Downloaded html");
         }
     }
 }

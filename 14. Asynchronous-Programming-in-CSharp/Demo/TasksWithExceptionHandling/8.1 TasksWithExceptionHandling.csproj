@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DB825CA-E0C0-4D46-8E0C-E06AC33E67BB}</ProjectGuid>
+    <ProjectGuid>{F7005A89-1B07-4F6A-A173-C0715A198721}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RaceConditionsSalesSum</RootNamespace>
-    <AssemblyName>RaceConditionsSalesSum</AssemblyName>
+    <RootNamespace>TasksWithExceptionHandling</RootNamespace>
+    <AssemblyName>TasksWithExceptionHandling</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,10 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DaySales.cs" />
-    <Compile Include="RaceConditionsSalesSum.cs" />
+    <Compile Include="TasksWithExceptionHandling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SoldItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

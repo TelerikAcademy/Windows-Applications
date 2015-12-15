@@ -1,4 +1,4 @@
-﻿namespace CreatingAndContinuingTasks
+﻿namespace SquareRootDemoWithAsyncAndAwait
 {
     using System;
     using System.Collections.Concurrent;
@@ -7,7 +7,7 @@
     using System.Threading;
     using System.Threading.Tasks;
 
-    public static class CreatingAndContinuingTasks
+    public static class SquareRootDemoWithAsyncAndAwait
     {
         public static void Main()
         {
@@ -30,16 +30,15 @@
             }
         }
 
-        private static void LoadSquareRootsLookupTableAsync(int numbersCount, IDictionary<int, double> destinationTable)
+        // Not only this is shorter but try/catch works!
+        private static async void LoadSquareRootsLookupTableAsync(int numbersCount, IDictionary<int, double> destinationTable)
         {
-            RunReadSquareRootsLookupTableAsync(numbersCount).ContinueWith(
-                loadTask =>
-                {
-                    foreach (var entry in loadTask.Result)
-                    {
-                        destinationTable[entry.Key] = entry.Value;
-                    }
-                });
+            var numbers = await RunReadSquareRootsLookupTableAsync(numbersCount);
+            Console.WriteLine("Data ready!");
+            foreach (var entry in numbers)
+            {
+                destinationTable[entry.Key] = entry.Value;
+            }
         }
 
         private static Task<IDictionary<int, double>> RunReadSquareRootsLookupTableAsync(int n)

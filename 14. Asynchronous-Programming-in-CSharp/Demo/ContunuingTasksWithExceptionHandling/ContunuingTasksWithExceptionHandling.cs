@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ContunuingTasksWithExceptionHandling
+﻿namespace ContunuingTasksWithExceptionHandling
 {
+    using System;
+    using System.Collections.Concurrent;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+
     class ContunuingTasksWithExceptionHandling
     {
         static Dictionary<int, double> ReadSquareRootsLookupTable(string filename)
@@ -42,7 +40,7 @@ namespace ContunuingTasksWithExceptionHandling
             {
                 if(loadTask.IsFaulted)
                 {
-                    //Note: See the problem here?
+                    // Note: See the problem here?
                     Console.WriteLine("The lookup table failed to load due to: " + loadTask.Exception);
                 }
 
