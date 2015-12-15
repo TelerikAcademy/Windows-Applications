@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mvvm.ViewModels
+namespace Superheroes.ViewModels
 {
   public class ViewModelBase : INotifyPropertyChanged
   {

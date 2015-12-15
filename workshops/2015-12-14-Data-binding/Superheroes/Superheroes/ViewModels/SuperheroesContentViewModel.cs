@@ -1,14 +1,11 @@
-﻿using Mvvm.Extensions;
-using Mvvm.Helpers;
-using System;
+﻿using Superheroes.Extensions;
+using Superheroes.Helpers;
+
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Mvvm.ViewModels
+namespace Superheroes.ViewModels
 {
   public class SuperheroesContentViewModel : ViewModelBase, IContentViewModel
   {

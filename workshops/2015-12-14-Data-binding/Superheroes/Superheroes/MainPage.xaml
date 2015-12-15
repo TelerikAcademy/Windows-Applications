@@ -1,11 +1,11 @@
 ﻿<Page
-    x:Class="Mvvm.MainPage"
+    x:Class="Superheroes.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Mvvm"
+    xmlns:local="using:Superheroes"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewModels="using:Mvvm.ViewModels"
+        xmlns:viewModels="using:Superheroes.ViewModels"
     Name="pageMain"
     mc:Ignorable="d">
     <Page.Resources>

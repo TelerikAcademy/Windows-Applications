@@ -1,4 +1,4 @@
-﻿using Mvvm.ViewModels;
+﻿using Superheroes.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,7 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Mvvm
+namespace Superheroes
 {
   /// <summary>
   /// An empty page that can be used on its own or navigated to within a Frame.
@@ -26,7 +26,6 @@ namespace Mvvm
     public MainPage()
     {
       this.InitializeComponent();
-
 
       //https://s-media-cache-ak0.pinimg.com/originals/c1/91/6c/c1916cd2bbbd45e67d043096d9c55fb1.jpg
       //https://littlemissobsessivesanatomy.files.wordpress.com/2012/07/happy-batman2.jpg

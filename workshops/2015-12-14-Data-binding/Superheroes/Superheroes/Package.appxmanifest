@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="42b40493-0d6b-48de-a3d8-7a436f052688"
+    Name="d886f5e0-77ef-433b-ae97-79d701893b93"
     Publisher="CN=dminkov"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="42b40493-0d6b-48de-a3d8-7a436f052688" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="d886f5e0-77ef-433b-ae97-79d701893b93" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Mvvm</DisplayName>
+    <DisplayName>Superheroes</DisplayName>
     <PublisherDisplayName>dminkov</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="Mvvm.App">
+      EntryPoint="Superheroes.App">
       <uap:VisualElements
-        DisplayName="Mvvm"
+        DisplayName="Superheroes"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Mvvm"
+        Description="Superheroes"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

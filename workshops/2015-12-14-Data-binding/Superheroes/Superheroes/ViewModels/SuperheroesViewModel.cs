@@ -1,4 +1,4 @@
-﻿namespace Mvvm.ViewModels
+﻿namespace Superheroes.ViewModels
 {
   public class SuperheroesViewModel : ViewModelBase
   {
