@@ -54,7 +54,7 @@ TODO
 | --- | --------------------------------| -------- | ----- | ------- |
 | 14  | Asynchronous Programming in C#  | 3h       | 10:00 | Niki    |
 | 15  | SQLite Local Storage in UWP     | 1h       | 14:00 | Niki    |
-| 16  | Working with remote Data        | 1h       | 15:00 | Niki    |
+| 16  | Working with Remote Data        | 1h       | 15:00 | Niki    |
 
 ### 17 December 2015 (Thursday)
 

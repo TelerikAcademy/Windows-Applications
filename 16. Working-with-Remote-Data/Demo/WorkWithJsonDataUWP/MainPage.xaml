@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="WorkWithJsonDataUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WorkWithJsonDataUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="RunButton" Content="Run" HorizontalAlignment="Stretch" Margin="10,10,10,0" VerticalAlignment="Top" Height="46" Click="RunButtonClick"/>
+        <ScrollViewer Margin="10,61,10,10">
+            <TextBlock x:Name="ResultTextBlock" TextWrapping="Wrap" Text="" />
+        </ScrollViewer>
+    </Grid>
+</Page>
