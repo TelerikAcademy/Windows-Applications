@@ -1,0 +1,105 @@
+﻿<Page
+    x:Class="Mvvm.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mvvm"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:Mvvm.ViewModels"
+    Name="pageMain"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="superHeroItemTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding ImgUrl}" 
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.RowSpan="2"/>
+                <TextBlock Text="{Binding Name}"
+                                       Grid.Row="0"
+                                       Grid.Column="1"/>
+                <TextBlock Text="{Binding Powers}"
+                                       Grid.Row="1"
+                                       Grid.Column="1"/>
+                <Button Content="Delete"
+                        Grid.Row="2"
+                        CommandParameter="{Binding}"
+                        Command="{Binding ElementName=pageMain,
+                                          Path=DataContext.ContentViewModel.Delete}"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="300"/>
+        </Grid.RowDefinitions>
+        <Grid Name="panelTitle"
+              Grid.Row="0">
+            <TextBlock Text="{Binding Title}" 
+                       Style="{StaticResource TitleStyle}"/>
+        </Grid>
+        <Grid Name="panelContent"
+              Grid.Row="1">
+            <ListBox ItemsSource="{Binding ContentViewModel.Superheroes}"
+                     ItemTemplate="{StaticResource superHeroItemTemplate}"/>
+        </Grid>
+        <Grid Name="panelAdd"
+              Grid.Row="2">
+            <Grid.Resources>
+                <viewModels:SuperheroesViewModel x:Key="newSuperhero"/>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.RowSpan="3"
+                   Source="{Binding ElementName=tbUrl,
+                                    Path=Text}"/>
+            <Grid Grid.Row="0"
+                  Grid.Column="1"
+                  DataContext="{StaticResource newSuperhero}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <TextBox Name="tbUrl"
+                     Grid.Row="0"
+                     Text="{Binding ImgUrl, Mode=TwoWay}"/>
+                <TextBox Name="tbTitle1"
+                     Grid.Row="1"
+                     Text="{Binding Name, Mode=TwoWay}"/>
+                <TextBox Name="tbTitle2"
+                     Grid.Row="2"
+                     Text="{Binding Powers, Mode=TwoWay}"/>
+            </Grid>
+
+            <Button Content="Save"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                CommandParameter="{StaticResource newSuperhero}"
+                Command="{Binding ContentViewModel.Save}"/>
+        </Grid>
+    </Grid>
+</Page>
