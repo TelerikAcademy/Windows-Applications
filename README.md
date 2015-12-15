@@ -32,7 +32,7 @@ TODO
 |     | Styles and Templates      | 1h       | Doncho  |
 |     | Resources                 | 0.5h     | Doncho  |
 
-### 14 December 2015
+### 14 December 2015 (Monday)
 
 | №   | Topic                                 | Duration | Time  |
 | --- | ------------------------------------- | -------- | ----- |
@@ -40,7 +40,7 @@ TODO
 |     | Views, Custom controls, User Controls | 2h       | 13:00 |
 |     | **Workshop**: Views                   | 4h       | 15:00 |
 
-### 15 December 2015
+### 15 December 2015 (Tuesday)
 
 | №   | Topic                    | Duration | Time  |
 | --- | -------------------------| -------- | ----- |
@@ -48,15 +48,15 @@ TODO
 | 13  | Model-View-ViewModel     | 1h       | 12:30 |
 |     | **Workshop**: Using MVVM | 4h       | 14:00 |
 
-### 16 December 2015
+### 16 December 2015 (Wednesday)
 
 | №   | Topic                           | Duration | Time  | Trainer |
 | --- | --------------------------------| -------- | ----- | ------- |
-| 14  | Asynchronous Programming in C#  | 2h       | 10:00 | Niki    |
-| 15  | Application Storages            | 1h       | 13:00 | Niki    |
-| 16  | Working with remote Data        | 1h       | 14:00 | Niki    |
+| 14  | Asynchronous Programming in C#  | 3h       | 10:00 | Niki    |
+| 15  | SQLite Local Storage in UWP     | 1h       | 14:00 | Niki    |
+| 16  | Working with remote Data        | 1h       | 15:00 | Niki    |
 
-### 17 December 2015
+### 17 December 2015 (Thursday)
 
 | №   | Topic                             | Duration | Time  |
 | --- | ----------------------------------| -------- | ----- |
@@ -65,7 +65,7 @@ TODO
 |     | App Lifecycle                     | 1h       | 14:00 |
 |     | File system access                | 1h       | 15:30 |
 
-### 18 December 2015
+### 18 December 2015 (Friday)
 
 | №   | Topic                                 | Duration | Time  |
 | --- | ------------------------------------- | -------- | ----- |
