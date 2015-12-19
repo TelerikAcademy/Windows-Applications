@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="GesturesDemos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GesturesDemos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Canvas Name="theCanvas"
+                Background="Yellow"
+                Tapped="theCanvas_DoubleTapped"                
+                Holding="theCanvas_Holding"
+                ManipulationStarting="theCanvas_ManipulationStarting"
+                ManipulationStarted="theCanvas_ManipulationStarted"
+                ManipulationDelta="theCanvas_ManipulationDelta"
+                ManipulationCompleted="theCanvas_ManipulationCompleted"
+                ManipulationInertiaStarting="theCanvas_ManipulationInertiaStarting"
+                ManipulationMode="All">
+            <Canvas Name="rect"
+                    Width="200"
+                    Height="200"
+                    Background="Pink">
+                <Rectangle 
+                       Width="50"
+                       Height="50"
+                       Fill="Purple"
+                       Stroke="Green" />
+            </Canvas>
+        </Canvas>
+
+    </Grid>
+</Page>

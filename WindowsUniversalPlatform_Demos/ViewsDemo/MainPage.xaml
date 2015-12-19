@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="ViewsDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ViewsDemo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:ViewsDemo.Controls"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="catItemTemplate">
+            <controls:TitledImage Height="250"
+                                  TitlePosition="{Binding Value}"
+                                  Source="{Binding ImgSrc}"
+                                  Title="{Binding Name}"
+                                  Swipe="{Binding Move}"/>
+        </DataTemplate>
+    </Page.Resources>
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ItemsControl ItemsSource="{Binding Cats}"
+                      ItemTemplate="{StaticResource catItemTemplate}"/>
+
+    </StackPanel>
+</Page>
