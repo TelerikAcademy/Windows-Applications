@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="BallsGame.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BallsGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:helpers="using:BallsGame.Helpers"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="BallInCanvasContainerStyle" TargetType="ContentPresenter">
+            <Setter Property="helpers:BindingHelper.CanvasLeftBindingPath" Value="Left"/>
+            <Setter Property="helpers:BindingHelper.CanvasTopBindingPath" Value="Top"/>
+        </Style>
+        <DataTemplate x:Key="BallTemplate">
+            <Ellipse Fill="Orange" 
+                     Stroke="Green"
+                     Width="{Binding Size}"
+                     Height="{Binding Size}"/>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="CanvasItemsPanel">
+            <Canvas />
+        </ItemsPanelTemplate>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="The balls! Game"
+                   FontSize="36"
+                   TextAlignment="Center"/>
+        <ItemsControl Name="icBalls"
+                      VerticalAlignment="Stretch"
+                      ItemsSource="{Binding Balls}"
+                      ItemsPanel="{StaticResource CanvasItemsPanel}"
+                      ItemContainerStyle="{StaticResource BallInCanvasContainerStyle}"
+                      ItemTemplate="{StaticResource BallTemplate}"/>
+
+    </Grid>
+</Page>

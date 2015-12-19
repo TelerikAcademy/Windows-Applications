@@ -34,7 +34,7 @@ namespace ViewsDemo.Controls
 
     // Using a DependencyProperty as the backing store for Swipe.  This enables animation, styling, binding, etc...
     public static readonly DependencyProperty SwipeProperty =
-        DependencyProperty.Register("Swipe", typeof(ICommand), typeof(TitledImage), new PropertyMetadata(null, new PropertyChangedCallback(HandleSwipeChanged));
+        DependencyProperty.Register("Swipe", typeof(ICommand), typeof(TitledImage), new PropertyMetadata(null, new PropertyChangedCallback(HandleSwipeChanged)));
 
     private static void HandleSwipeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
